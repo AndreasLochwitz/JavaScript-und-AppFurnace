@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>JavaScript - Grundlagen/Tipps</title>
+	</head>
+	<body>
+		
+		<h2>JavaScript - Allgemein</h2>
+			<p>Im folgenden werden die grundlegenden Elemente der JavaScript-Sprache Beispielhaft dargestellt. Für tiefergehende Informationen bitte die Seiten aus der Links-Sektion beachten.</p>
+			<h3>Inhalt</h3>
+		<p>
+			<ul>
+				<li>JavaScript Allgemein</li>
+				<ul>
+					<li><a href="#kommentare">Kommentare</a></li>
+					<li><a href="#debug">Debugausgaben</a></li>
+					<li><a href="#var">Variablen und Sichtbarkeit</a></li>
+					<li><a href="#funktionen">Funktionen definieren</a></li>
+					<li><a href="#array">Array</a></li>
+					<li><a href="#hash">Hash-Array</a></li>
+					<li><a href="#timer">Timer</a></li>
+					<li><a href="#ext-js">Externe (JavaScript-) Dateien laden</a></li>
+				</ul>
+				<li>AppFurnace</li>
+				<ul>
+					<li><a href="#compass">Nutzung des Compass</a></li>
+				</ul>
+				<!-- <li><a href=""></a></li>
+				<li><a href=""></a></li>
+				<li><a href=""></a></li>
+				<li><a href=""></a></li>
+				<li><a href=""></a></li>
+				<li><a href=""></a></li>
+				<li><a href=""></a></li>
+				<li><a href=""></a></li>
+				<li><a href=""></a></li>
+				<li><a href=""></a></li>
+				<li><a href=""></a></li>
+				<li><a href=""></a></li> -->
+				<li>Sonstiges</li>
+				<ul>
+					<li><a href="#links">Links</a></li>
+				</ul>
+
+			</ul>
+		</p>
+		<h3><a name="kommentare">Kommentare</a></h3>
+			<p>Kommentare in JavaScript können sowohl einzeilig wie auch mehrzeilig (wie es auch in Java ist) angelegt werden.</p>
+			<script src="https://gist.github.com/AndreasLochwitz/8045347.js"></script>
+			<script src="https://gist.github.com/AndreasLochwitz/8045377.js"></script>
+			
+		<h3><a name="debug">Debugausgaben</a></h3>
+		<p>Mittels der Funktion <span style="font-style: italic">console.log</span> kann man den Inhalt von Variablen in der JavaScript-Konsole des Browsers ausgeben.</p>
+		<script src="https://gist.github.com/AndreasLochwitz/8045735.js"></script>
+			
+		<h3><a name="var">Variablen und deren Sichtbarkeit</a></h3>
+		<p>In JavaScript werden Variablen mit dem Schlüsselwort <span style="font-style: italic">var</span> definiert. Erfolgt die Definition außerhalb einer Methode, ist die Variable global sichtbar, dass heißt sie kann von jeder Funktion geändert werden. Wird die Definition innerhalb einer Funktion durchgeführt, ist die Variable nur innerhalb dieser Funktion bzw. darin erstellten anonymen Funktionen sichtbar.</p>
+		<script src="https://gist.github.com/AndreasLochwitz/8045571.js"></script>
+		<script src="https://gist.github.com/AndreasLochwitz/8045630.js"></script>
+		
+		<h3><a name="#funktionen">Eigene Funktionen definieren</a></h3>
+		<p>Eigene Funktionen können mit dem Schlüsselwort <span style="font-style: italic">function</span> definiert werden. In Klammern werden die Parameter angegeben, die der Funktion übergeben werden können. Wird eine Funktion die Parameter definiert hat ohne Parameter aufgerufen, so haben die Parameter den Wert <span style="font-style: italic">undefined</span>. Mit der Anweisung <span style="font-style: italic"></span></p>
+		<script src="https://gist.github.com/AndreasLochwitz/8045685.js"></script>
+		
+		<h3><a name="array">Datenstruktur 1: Array</a></h3>
+		<p>Mit Arrays können eine Menge von gleichartigen Variablen verwaltet werden, wo es nicht notwendig ist, einen direkten Zugriff auf die einzelnen Elemente zu haben. Im Gegensatz zu Java können Arrays in JavaScript zur Laufzeit beliebig verändert werden.</p>
+		<script src="https://gist.github.com/AndreasLochwitz/8045846.js"></script>
+		
+		<h3><a name="hash">Datenstruktur 2: Hash-Array</a></h3>
+		<p>Mit Hash-Arrays können Daten als Key-Value Paare verwaltet werden. Der Schlüssel (Key) muss einmalig innerhalb des Hash-Arrays sein und dient der Referenzierung (Zugriff) auf die Daten (Value). Hash-Arrays werden auch als assoziative Arrays bezeichnet.</p>
+		<script src="https://gist.github.com/AndreasLochwitz/8046106.js"></script>
+		
+		<h3><a name="timer">Zeitverzögerte Ausführung und Timer</a></h3>
+		<p>Mit Hilfe der Funktion <span style="font-style: italic">setTimeout</span> kann die Ausführung von Programm-Code auf einen späteren Zeitpunkt verschoben werden.</p>
+		<script src="https://gist.github.com/AndreasLochwitz/8046600.js"></script>
+		
+		<p>Mit der Funktion <span style="font-style: italic">setInterval</span> kann es realisiert werden, dass Programm-Code immer wieder aufgerufen wird. Mit der Funktion <span style="font-style: italic">clearInterval</span> kann ein zuvor mit <span style="font-style: italic">setInterval</span> gestartetes Interval wieder beendet werden. Dazu ist es notwendig, den Rückgabewert von <span style="font-style: italic">setInterval</span> hier anzugeben.</p>
+		<script src="https://gist.github.com/AndreasLochwitz/8051571.js"></script>
+		
+		<p>Ein Beispiel, wofür man das verwenden kann wäre ein Countdown.</p>
+		<script src="https://gist.github.com/AndreasLochwitz/8051603.js"></script>
+		
+		<h3><a name="ext-js">Externe Dateien laden</a></h3>
+		<p>Mit Hilfe der <a href="https://github.com/rgrove/lazyload/" target="_blank">LazyLoad.js</a> Bibliothek können zur Laufzeit dynamisch weitere JavaScript und CSS Dateien geladen werden, die das Aussehen oder die Funktionalität erweitern und verändern.</p>
+		<script src="https://gist.github.com/AndreasLochwitz/8054162.js"></script>
+		<script src="https://gist.github.com/AndreasLochwitz/8054420.js"></script>
+		
+		<h2>JavaScript und AppFurnace</h2>
+		
+		<h3><a name="compass">Nutzung des Compass</a></h3>
+		<p>Die Nutzung des Compass in AppFurnace ist <a href="http://the.appfurnace.com/docs/cordova_compass_compass.md.html#Compass" target="_blank">hier</a> beschrieben. Ein kleines Beispiel um den Sensor auszulesen und mit einem Label dessen Wert darzustellen:</p>
+		<script src="https://gist.github.com/AndreasLochwitz/8072031.js"></script>
+		
+		<h2><a name="links">Links zu weiteren Informationen</a></h2>
+		<ul>
+			<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">JavaScript im Mozilla Developer Network</a></li>
+			<li><a href="http://eloquentjavascript.net/" target="_blank">Eloquent JavaScript</a></li>
+			<li><a href="http://de.selfhtml.org/javascript/index.htm" target="_blank">JavaScript bei SELFHTML</a></li>
+			<li><a href="http://www.css4you.de" target="_blank">CSS 4 you - Beschreibung von CSS-Eigenschaften</a></li>
+		</ul>
+		
+	</body>
+</html>
