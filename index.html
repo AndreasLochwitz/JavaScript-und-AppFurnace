@@ -28,7 +28,7 @@
 					<li><a href="#lazyloadappfurnace">LazyLoad.js und AppFurnace</a></li>
 					<li><a href="#routingappfurance">Routing und AppFurnace</a></li>
 					<li><a href="#compass">Nutzung des Compass</a></li>
-					
+					<li><a href="#maptool">Bei Problemen mit dem MapTool</a></li>
 				</ul>
 				<!-- <li><a href=""></a></li>
 				<li><a href=""></a></li>
@@ -110,6 +110,12 @@
 		<h3><a name="compass">Nutzung des Compass</a></h3>
 		<p>Die Nutzung des Compass in AppFurnace ist <a href="http://the.appfurnace.com/docs/cordova_compass_compass.md.html#Compass" target="_blank">hier</a> beschrieben. Ein kleines Beispiel um den Sensor auszulesen und mit einem Label dessen Wert darzustellen:</p>
 		<script src="https://gist.github.com/AndreasLochwitz/8072031.js"></script>
+    
+        <h3><a name="maptool">Probleme mit dem MapTool</a></h3>
+        <p>Gelegentlich kommt es vor, dass das MapTool von AppFurnace sich irgendwo verschluckt bei der Bearbeitung. Dabei geht eine interne Datenstruktur kaputt, was dazu führt, dass die Karte nicht mehr geändert werden kann. Eine Möglichkeit wäre, eine Kopie des Projektes anzulegen (rechts-oben "Zahnradmenü" und "Save as new App") oder man kopiert sich die Geo-Informationen der bisherigen Orte mittels:</p>
+    <script src="https://gist.github.com/AndreasLochwitz/8298801.js"></script>
+    <p> und erstellt die Orte dann durch diesen Quelltext (entsprechend anpassen)</p>
+    <script src="https://gist.github.com/AndreasLochwitz/8298661.js"></script>
 		
 		<h2><a name="links">Links zu weiteren Informationen</a></h2>
 		<ul>
